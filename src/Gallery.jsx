@@ -3,68 +3,6 @@ import { useState, useEffect } from 'react';
 
 const GLOBAL_URL = "https://api.munlai.me"
 
-const routes = [{
-    name: "Communism",
-    description: "A la vibora vibora vibora de la mar de la mar por aqui pueden pasar los delante corren mucho y los de atrás se quedan tras tras tras",
-    path: "/image/communismmsmsmsmsmmsmsms",
-    method: "GET"
-}, {
-    name: "Rainbow",
-    description: "A small description",
-    path: "/image/rainbow",
-    method: "GET"
-}, {
-    name: "Random Image",
-    description: "A small description",
-    path: "/image/random",
-    method: "GET"
-}, {
-    name: "Wasted",
-    description: "A small description",
-    path: "/image/waste",
-    method: "GET"
-}, {
-    name: "AAAAA",
-    description: "A small description",
-    path: "/image/wasteddd",
-    method: "GET"
-}, {
-    name: "Meow",
-    description: "A small description",
-    path: "/image/AAA",
-    method: "GET"
-}, {
-    name: "Communism",
-    description: "A small description",
-    path: "/image/communism",
-    method: "GET"
-}, {
-    name: "Rainbow",
-    description: "A small description",
-    path: "/image/rainbow",
-    method: "GET"
-}, {
-    name: "Random Image",
-    description: "A small description",
-    path: "/image/random",
-    method: "GET"
-}, {
-    name: "Wasted",
-    description: "A small description",
-    path: "/image/waste",
-    method: "GET"
-}, {
-    name: "AAAAA",
-    description: "A small description",
-    path: "/image/wasteddd",
-    method: "GET"
-}, {
-    name: "Meow",
-    description: "A small description",
-    path: "/image/AAA",
-    method: "GET"
-}]
-
 function Copy({ path, done }) {
     return (
         <>

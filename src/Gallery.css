@@ -7,7 +7,7 @@ body {
 
 #header {
     display: flex;
-    font-size: 5vw;
+    font-size: 5.5vw;
     justify-content: center;
     padding: 20px;
     margin: 20px;
@@ -27,7 +27,7 @@ body {
 #header p {
     color: white;
     margin-top: 0;
-    font-size: 1.75vw;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -171,11 +171,11 @@ button i {
 
 .endpoint .method {
     position: absolute;
-    width: 1.6vw;
-    height: 1.6vw;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
-    top: 0.8vw;
-    left: 0.8vw;
+    top: 10px;
+    left: 10px;
     background-color: royalblue;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
