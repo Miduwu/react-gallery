@@ -1,55 +1,14 @@
-body {
-    background: url("https://i.imgur.com/7rFc2oM.png") #09f repeat fixed;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: whitesmoke;
-    margin: 4px;
-}
-
-#header {
-    display: flex;
-    font-size: 5.5vw;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px;
-    margin-top: 30px;
-    margin-bottom: 10vh;
-}
-
-#header strong {
-    color: white;
-    margin-bottom: 0;
-}
-
-#header strong i {
-    animation: logo-spin infinite 5s linear;
-}
-
-#header p {
-    color: white;
-    margin-top: 0;
-    font-size: 20px;
-    text-align: center;
-}
-
-.logo {
-    display: inline-block;
-    text-shadow: rgba(0,255,38,0.93) 0px 0px 40px;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    box-sizing: border-box;
-    justify-content: space-around;
+:root {
+    --card-back:  rgba(21, 21, 21, 0.52);
+    --green-white: rgba(0,255,38,0.62);
+    --green-white-low: rgba(0,255,38,0.20)
 }
 
 .endpoint {
-    backdrop-filter: blur(8px) saturate(180%);
-    -webkit-backdrop-filter: blur(8px) saturate(180%);
+    backdrop-filter: blur(13px) saturate(148%);
+    -webkit-backdrop-filter: blur(13px) saturate(148%);
+    background-color: var(--card-back);
+    border-radius: 12px;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
@@ -62,15 +21,16 @@ body {
     transition: all 0.5s ease-in;
     z-index: inherit;
     margin-bottom: 10px;
-    background-color: rgba(19, 32, 31, 0.72);
-    border-radius: 10px;
+    -webkit-box-shadow:0px 0px 23px 0px var(--green-white-low);
+    -moz-box-shadow: 0px 0px 23px 0px var(--green-white-low);
+    box-shadow: 0px 0px 23px 0px var(--green-white-low);
 }
 
 .endpoint:hover {
     transform: scale(110%);
-    -webkit-box-shadow:0px 0px 23px 0px rgba(0,255,38,0.62);
-    -moz-box-shadow: 0px 0px 23px 0px rgba(0,255,38,0.62);
-    box-shadow: 0px 0px 23px 0px rgba(0,255,38,0.62);
+    -webkit-box-shadow:0px 0px 23px 0px var(--green-white);
+    -moz-box-shadow: 0px 0px 23px 0px var(--green-white);
+    box-shadow: 0px 0px 23px 0px var(--green-white);
     filter: brightness(130%);
 }
 
@@ -98,7 +58,8 @@ body {
     height: 15%;
     border-radius: 8px;
     background-color: rgb(19, 19, 19);
-    transition: all .5s ease-in-out;
+    transition: all .9s ease-in-out;
+    margin-bottom: 1.8vh;
 }
 
 .endpoint .path .text {
@@ -122,27 +83,32 @@ body {
     cursor: pointer;
 }
 
+.endpoint strong {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .btns {
     display: inline-block;
 }
 
-button i {
-    margin-right: 0.3vw;
+a i {
+    margin-right: 0.5vw;
 }
 
 .btn {
     cursor: pointer;
-    padding: 8px;
+    padding: 7px 22px;
     color: whitesmoke;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85em;
     border: 0;
 }
 
 .btn + .btn {
-    margin-left: 1vw;
+    margin-left: 0.7vw;
 }
 
 .link {
@@ -166,7 +132,7 @@ button i {
 }
 
 .btn:active {
-    animation: flash 0.3s;
+    filter: brightness(200%);
 }
 
 .endpoint .method {
@@ -181,7 +147,7 @@ button i {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9em;
     text-transform: uppercase;
-    transition: all 0.3s ease-in;
+    transition: all .4s ease-in-out;
     cursor: default;
 }
 
@@ -189,36 +155,18 @@ button i {
     opacity: 0;
 }
 
-.endpoint .method:hover {
+.endpoint:hover .method {
     width: auto;
-    height: auto;
+    height: 16px;
     padding: 5.5px 11px;
     border-radius: 10px;
 }
 
-.endpoint .method:hover strong {
+.endpoint:hover .method strong {
     animation: forwards makeVisible 0.5s 0.2s ease-in;
 }
 
 @keyframes makeVisible {
     0%   { opacity: 0; }
     100% { opacity: 1; }
-}
-
-@keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-}
-
-@keyframes flash {
-    0%, 100% {
-      filter: none;
-   }
-    50% {
-      filter: brightness(200%);
-   }
 }

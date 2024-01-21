@@ -1,0 +1,67 @@
+:root {
+    --dark-gray: #222222;
+    --green-white: rgb(0,255,38);
+}
+
+body {
+    background: url("https://i.imgur.com/7rFc2oM.png") #09f repeat fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    margin: 0px 0px;
+    margin-top: 0;
+}
+
+#header {
+    display: flex;
+    font-size: 8vw;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 5vh;
+}
+
+#header strong {
+    color: white;
+    margin-bottom: 0;
+}
+
+#header strong i {
+    animation: logo-spin infinite 5s linear;
+}
+
+#header p {
+    color: white;
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+    text-shadow: var(--green-white) 0px 0px 40px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.python {
+    font-weight: bold;
+}
+
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
